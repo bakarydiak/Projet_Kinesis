@@ -1,0 +1,8 @@
+meteo_server/gradle/**
+meteo_server/.env
+meteo_server/build/**
+meteo_server/.idea/**
+terraform/.idea/**
+terraform/.terraform/**
+.gradle
+.idea

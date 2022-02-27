@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.11'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+
+    implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.1000')
+    implementation 'com.amazonaws:aws-java-sdk-kinesis:1.12.161'
+
+    implementation 'com.amazonaws:amazon-kinesis-producer:0.14.10'
+    implementation 'com.amazonaws:amazon-kinesis-client:1.14.7'
+
+    implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
